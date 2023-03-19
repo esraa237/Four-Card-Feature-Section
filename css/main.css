@@ -1,0 +1,106 @@
+:root{
+    --color-red:hsl(0, 78%, 62%);
+    --color-cyan:hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue:hsl(212, 86%, 64%);
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+    --font-family:'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    height:100vh;
+    background-color: var(--light-gray);
+}
+.container{
+    padding-left: 15px;
+    padding-right:15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Small*/
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  .container .heading-div{
+    text-align: center;
+    max-width:500px;
+    margin:50px auto 30px;
+    color:var(--dark-blue);
+  }
+  .container .heading-div h2:first-of-type{
+    font-weight:200; 
+  }
+  .container .heading-div >p{
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--grayish-blue);
+  }
+  .container .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    gap:20px;
+  }
+  .container .cards .col{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .cards .card{
+    padding:30px;
+    box-shadow: 0 0 7px var(--grayish-blue);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.container .cards .one{
+    border-top: 5px solid var(--color-cyan);
+}
+.container .cards .two{
+    border-top: 5px solid var(--color-red);
+    margin-bottom: 20px;
+}
+.container .cards .three{
+    border-top: 5px solid var(--color-orange);
+}
+.container .cards .four{
+    border-top: 5px solid var(--color-blue);
+}
+.container .cards .card p{
+    margin:10px 0 30px;
+    font-size: 15px;
+    color:var(--grayish-blue);
+}
+.container .cards .card img{
+    width:64px;
+    height:64px;
+    display: flex;
+    margin-left: auto;
+}
+.container footer{
+    padding:20px 0;
+}
